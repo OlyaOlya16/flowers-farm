@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers Farm - Online Flower Shop</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #fef7f5; 
+            color: #334e68; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-family: 'Pacifico', cursive; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #ff6f61;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff9671;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico';
+            color: #ff6f61;
+        }
+        .flower {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .flower:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .flower img {
+            max-width: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: scroll; 
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            scroll-snap-type: x mandatory;
+        }
+        .carousel img {
+            flex: 0 0 auto; 
+            width: 300px; 
+            border-radius: 10px;
+            transition: transform 0.3s;
+            scroll-snap-align: start; 
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+        }
+
+
+        .carousel::-webkit-scrollbar {
+        height: 10px;
+        }
+
+        .carousel::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .carousel::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+        .order-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 25px;
+            text-align: center;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .order-button:hover {
+            background-color: #ff9671;
+        }
+        footer {
+            background-color: #334e68;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flowers Farm</h1>
+        <p>Your go-to online shop for fresh and beautiful flowers</p>
+    </header>
+    <nav>
+        <a href="#carousel">Arrangements</a>
+        <a href="#flowers">Our Flowers</a>
+        <a href="#offers">Special Offers</a>
+        <a href="#delivery">Delivery Info</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <section id="carousel">
+            <h2>Flower Arrangements</h2>
+            <div class="carousel">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/fl-box.png" alt="Flower Boxes">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/winterbox.png" alt="Winter Bouquets">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/wedding.png" alt="Wedding Bouquets">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/flowerpot.png" alt="Flowerpot">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/b1.png" alt="b1">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/b2.png" alt="b2">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/b3.png" alt="b3">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/b4.png" alt="b4">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/b5.png" alt="b5">
+
+               
+            </div>
+        </section>
+        
+        <section id="flowers">
+            <h2>Our Flowers</h2>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/rose.png" alt="Rose">
+                <div>
+                    <h3>Roses</h3>
+                    <p>Elegant and timeless, roses are perfect for every occasion. Price 70 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/tulip.png" alt="Tulip">
+                <div>
+                    <h3>Tulips</h3>
+                    <p>Bright and cheerful tulips add a splash of color to your day. Price 50 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/lilly.png" alt="Lily">
+                <div>
+                    <h3>Lilies</h3>
+                    <p>Exquisite and fragrant, lilies make every moment special. Price 65 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/orchid.png" alt="Orchid">
+                <div>
+                    <h3>Orchids</h3>
+                    <p>Exotic and elegant, orchids bring sophistication to any space. Price 80 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/daisy.png" alt="Daisy">
+                <div>
+                    <h3>Daisies</h3>
+                    <p>Simple and charming, daisies are perfect for a cheerful gift. Price 7 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/sunflower.png" alt="Sunflower">
+                <div>
+                    <h3>Sunflowers</h3>
+                    <p>Bright and bold, sunflowers are a symbol of happiness and warmth. Price 15 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/carnation.png" alt="Carnation">
+                <div>
+                    <h3>Carnations</h3>
+                    <p>Classic and versatile, carnations come in a variety of colors. Price 55 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/peony.png" alt="Peony">
+                <div>
+                    <h3>Peonies</h3>
+                    <p>Luxurious and full, peonies are ideal for making a grand impression. Price 90 UAH - one </p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/hyacinth.png" alt="Hyacinth">
+                <div>
+                    <h3>Hyacinths</h3>
+                    <p>Sweet-smelling and colorful, hyacinths are a springtime favorite. Price 60 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/gerbera.png" alt="Gerbera">
+                <div>
+                    <h3>Gerberas</h3>
+                    <p>Vibrant and playful, gerberas are perfect for spreading joy. Price 40 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/lavender.png" alt="Lavender">
+                <div>
+                    <h3>Lavender</h3>
+                    <p>Relaxing and aromatic, lavender is perfect for creating a soothing ambiance. Price 20 UAH - one</p>
+                </div>
+            </div>
+            <div class="flower">
+                <img src="/Users/o.sklyanchuk/Downloads/flowers/chrysanthemum.png" alt="Chrysanthemum">
+                <div>
+                    <h3>Chrysanthemums</h3>
+                    <p>Rich in variety, chrysanthemums symbolize joy and longevity. Price 20 UAH - one</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="offers">
+            <h2>Special Offers</h2>
+            <p>Buy two bouquets, get the third one free!</p>
+            <p>Enjoy 20% off on all orders above 1000 UAH!</p>
+        </section>
+
+        <section id="delivery">
+            <h2>Delivery Information</h2>
+            <p>Fast and reliable delivery across Ukraine. Free shipping on orders over 500 UAH!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> 123 Bloom Street, Kyiv, Ukraine</p>
+            <p><strong>Phone:</strong> +380 44 123 4567</p>
+            <p><strong>Email:</strong> contact@flowersfarm.ua</p>
+        </section>
+
+        <a href="order.html" class="order-button">Place an Order</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Flowers Farm. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
